@@ -3,7 +3,7 @@ function loadMessages(requestData, prepend = false) {
     let scrollIsBottom = document.body.scrollHeight <= $window.scrollTop() + $window.outerHeight();
 
     $.get({
-        url: '/mini-chat/partials/messages.php',
+        url: 'partials/messages.php',
         data: requestData
     }, function(html) {
         if (prepend) {

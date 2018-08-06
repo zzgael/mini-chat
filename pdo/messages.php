@@ -6,7 +6,7 @@ include 'connection.php';
 $messagesCountOnLoad = 50;
 
 // Calculer le nombre de message dans la table messages
-$messagesCount = query('SELECT COUNT(id) AS counter FROM minichat.messages');
+$messagesCount = query('SELECT COUNT(id) AS counter FROM messages');
 
 $queryFilter = "";
 $queryLimit = "";

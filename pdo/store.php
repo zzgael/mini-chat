@@ -7,7 +7,7 @@ include 'connection.php';
 
 // Insertion du message à l'aide d'une requête préparée
 query(
-    'INSERT INTO minichat.messages (pseudo, message) VALUES(?, ?)',
+    'INSERT INTO messages (pseudo, message) VALUES(?, ?)',
     array($_POST['pseudo'], $_POST['message'])
 );
 
@@ -19,7 +19,7 @@ if ($pseudoQuery->fetchColumn() === "0") {
     $color = RandomColor::one();
 
     query(
-        'INSERT INTO minichat.users (pseudo, color) VALUES(?, ?)',
+        'INSERT INTO users (pseudo, color) VALUES(?, ?)',
         array($_POST['pseudo'], $color)
     );
 }
